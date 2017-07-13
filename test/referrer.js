@@ -11,6 +11,7 @@ var util          = require('util'),
 describe('Inbound referrer', function () {
 
   it('should be able to parse urls and referrers properly', function (done) {
+    this.timeout(5000);
     async.forEach(cases, function (testCase, cb) {
       var shortened = referrer.parse(testCase.url, testCase.referrer, function (err, desc) {
 

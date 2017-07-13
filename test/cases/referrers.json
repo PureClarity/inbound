@@ -81,6 +81,66 @@
 	},
 	{
 		"url": "",
+		"referrer": "http://www.instagram.com",
+		"result": {
+			"referrer": {
+				"type": "social",
+				"network": "instagram"
+			}
+		}
+	},
+	{
+		"url": "",
+		"referrer": "http://www.polyvore.com",
+		"result": {
+			"referrer": {
+				"type": "social",
+				"network": "polyvore"
+			}
+		}
+	},
+	{
+		"url": "",
+		"referrer": "http://www.reddit.com",
+		"result": {
+			"referrer": {
+				"type": "social",
+				"network": "reddit"
+			}
+		}
+	},
+	{
+		"url": "",
+		"referrer": "http://www.snapchat.com",
+		"result": {
+			"referrer": {
+				"type": "social",
+				"network": "snapchat"
+			}
+		}
+	},
+	{
+		"url": "",
+		"referrer": "http://www.tumblr.com",
+		"result": {
+			"referrer": {
+				"type": "social",
+				"network": "tumblr"
+			}
+		}
+	},
+	{
+		"url": "",
+		"referrer": "http://www.youtube.com",
+		"result": {
+			"referrer": {
+				"type": "social",
+				"network": "youtube"
+			}
+		}
+	},
+	{
+		"url": "",
 		"referrer": "http://search.aol.com/aol/search?s_it=topsearchbox.search&v_t=comsearch51&q=segment.io",
 		"result": {
 			"referrer": {
