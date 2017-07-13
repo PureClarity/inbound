@@ -7,100 +7,6 @@ inbound is a referrer parsing library for node.js / express web apps.
 
 Includes referrers for social media sites, search, email providers and ads
 
-## How To Use
-
-### Install
-```
-npm install inbound
-```
-
-### API
-```javascript
-var inbound = require('inbound');
-inbound.referrer.parse(url, referrer, function (err, description) {
-    console.log(description);
-});
-```
-
-**url** (string) is the page url, equivalent to client-side javascript's ```window.location.href``` or express.js ```req.url```
-
-**referrer** (string) is the referrer, equivalent to client-side javascript's ```document.referrer``` or express.js ```req.header('referrer')```
-
-### Express.js Middleware
-```javascript
-var inbound = require('inbound'),
-    express = require('express');
-
-var app = express();
-
-app.use(function (req, res, next) {
-  var referrer = req.header('referrer');
-  var href = req.url;
-  inbound.referrer.parse(href, referrer, function (err, desc) {
-    req.referrer = desc;
-    next(err);
-  });
-});
-
-app.use(app.router);
-
-app.get('/', function (req, res, next) {
-  return res.send(req.referrer);
-});
-
-var port = 8000;
-app.listen(port);
-console.log('Server listening on port : ' + port);
-```
-
-## Examples
-
-Here is an  example of a visitor clicking a twitter link and ending up at a New Yorker article.
-
-```javascript
-var url = "http://www.newyorker.com/online/blogs/johncassidy/2012/08/economy-points-to-dead-heat-in-november.html?
-mbid=gnep&google_editors_picks=true";
-var referrer = "http://twitter.com/ryah";
-
-inbound.referrer.parse(url, referrer, function (err, description) {
-    console.log(description);
-});
-```
-```json
-{
-  "referrer": {
-    "type": "social",
-    "network": "twitter"
-  }
-}
-```
-
-Here's an example of a visitor clicking a campaign email from gmail, and arriving at a blog:
-
-```javascript
-var url = "http://blog.intercom.io/churn-retention-and-reengaging-customers/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+contrast%2Fblog+%28The+Intercom+Blog%29";
-var referrer =  "https://mail.google.com/_/mail-static/_/js/main/m_i,t/rt=h/ver=am293eyFlXI.en./sv=1/am=!v8Czf-oeNMn1FOzaNKsLQrJy-oNN3RSSYMAZTBUxCzwgQcXtLnTEHCkGr437GpFE2Dliuw/d=1";
-
-inbound.referrer.parse(url, referrer, function (err, description) {
-    console.log(description);
-});
-```
-```json
-{
-  "referrer": {
-     "type": "email",
-     "client": "gmail",
-     "from": "https://mail.google.com/_/mail-static/_/js/main/m_i,t/rt=h/ver=am293eyFlXI.en./sv=1/am=!v8Czf-oeNMn1FOzaNKsLQrJy-oNN3RSSYMAZTBUxCzwgQcXtLnTEHCkGr437GpFE2Dliuw/d=1",
-     "link": "http://blog.intercom.io/churn-retention-and-reengaging-customers/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+contrast%2Fblog+%28The+Intercom+Blog%29"
-  },
-  "campaign": {
-    "source": "feedburner",
-    "medium": "feed",
-    "campaign": "Feed: contrast/blog (The Intercom Blog)"
-  }
-}
-```
-
 ## Supported Matchers
 
 ### Social
@@ -186,7 +92,6 @@ To add matchers:
 1. Add your test cases to [the test cases file](https://github.com/segmentio/inbound/tree/master/test/cases/referrers.json).
 1. Run and confirm that your test cases pass: ```npm test```
 1. Add your matcher to the [readme](https://github.com/segmentio/inbound/tree/master/README.md).
-1. Submit your pull request!
 
 ## Advanced
 
