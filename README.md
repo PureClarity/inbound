@@ -1,7 +1,11 @@
-# inbound
+# PureClarity inbound
 ---------------
 
+### Based on the original [Segment.io inbound lib](https://github.com/segmentio/inbound)
+
 inbound is a referrer parsing library for node.js / express web apps.
+
+Includes referrers for social media sites, search, email providers and ads
 
 ## How To Use
 
