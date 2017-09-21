@@ -417,18 +417,7 @@
 			}
 		}
 	},
-	{
-		"url": "https://news.google.com/nwshp?hl=en&tab=wn",
-		"referrer": "https://www.google.com/",
-		"result": {
-			"referrer": {
-				"type": "link",
-				"from": "https://www.google.com/",
-				"link": "https://news.google.com/nwshp?hl=en&tab=wn"
-			}
-		}
-	},
-	{
+		{
 		"url": "hhttp://enoughtobedanger.us/",
 		"referrer": "http://blog.enoughtobedanger.us/",
 		"result": {
