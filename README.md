@@ -2,6 +2,8 @@
 ---------------
 
 ### Based on the original [Segment.io inbound lib](https://github.com/segmentio/inbound)
+### Original lib appears to have been out of active dev since 2013
+### This is likely because some of the incoming services can no longer be correctly parsed (such as google search)
 
 inbound is a referrer parsing library for node.js / express web apps.
 
