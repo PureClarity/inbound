@@ -398,15 +398,6 @@
 		}
 	},
 	{
-		"url": "http://www.codecademy.com/create/creator",
-		"referrer": "http://www.codecademy.com/",
-		"result": {
-			"referrer": {
-				"type": "internal"
-			}
-		}
-	},
-	{
 		"url": "http://www.codecademy.com/tracks/code-year",
 		"referrer": "http://www.codeyear.com/",
 		"result": {
@@ -436,15 +427,6 @@
 				"type": "link",
 				"from": "https://stripe.com/blog",
 				"link": "https://manage.stripe.com/login?redirect=%2Faccount"
-			}
-		}
-	},
-	{
-		"url": "http://enoughtobedanger.us/introduction",
-		"referrer": "http://enoughtobedanger.us/",
-		"result": {
-			"referrer": {
-				"type": "internal"
 			}
 		}
 	},
@@ -511,7 +493,7 @@
 		"result": {
 			"referrer": {
 				"type": "email",
-				"client": "hotmail",
+				"client": "outlook",
 				"from": "http://sn143w.snt143.mail.live.com/mail/InboxLight.aspx?n=265210727",
 				"link": "http://www.nytimes.com/2012/12/23/us/mixed-reaction-to-call-for-armed-guards-in-schools.html?_r=0"
 			}
