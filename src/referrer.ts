@@ -16,7 +16,7 @@ import * as utils from 'util';
   * where "in" is a object containing referrer and campaign information
   * about this inbound visitor.
  */
-exports.parse = async function parse(href, referrer) {
+exports.parse = async function parse(href: string, referrer: string) {
   var parsedHref = url.parse(href || '');
   var parsedReferrer = url.parse(referrer || '');
   const tasks: Promise<any>[] = [];
@@ -27,7 +27,7 @@ exports.parse = async function parse(href, referrer) {
   var ref = results[0];
   var campaign = results[1];
 
-  var description: { referrer?: any, campaign?: any } = {};
+  var description: any = {};
   if (ref) description.referrer = ref;
   if (campaign) description.campaign = campaign;
 
@@ -37,7 +37,7 @@ exports.parse = async function parse(href, referrer) {
 async function parseReferrer(href, referrer) {
   var numOfMatchers = _.size(matchers);
 
-  var processMatcher = function (matcherIndex, done) {
+  let processMatcher = function (matcherIndex: number, done) {
     if (matcherIndex >= numOfMatchers) return done(null, null);
     else {
       var matcher = matchers[matcherIndex];
