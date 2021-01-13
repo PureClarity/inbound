@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@types/node": "^8.0.7",
-    "tldextract": "*",
+    "tldextract": "github:PureClarity/tldextract#peter/remove-broken-moz-request",
     "underscore": "*"
   },
   "devDependencies": {
