@@ -12,12 +12,12 @@
     "build": "./build.sh",
     "test": "mocha --reporter spec"
   },
-  "dependencies": {
-    "@types/node": "^8.0.7",
-    "tldextract": "github:PureClarity/tldextract#peter/remove-broken-moz-request",
+  "dependencies": {    
+    "tldextract": "github:PureClarity/tldextract",
     "underscore": "*"
   },
   "devDependencies": {
+    "@types/node": "^8.0.7",
     "should": "*",
     "mocha": "*"
   },
